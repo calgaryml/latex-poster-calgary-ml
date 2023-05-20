@@ -80,7 +80,7 @@
   \large
   Arxiv: 
   \begin{array}{l}
-    \includesvg[height=3.5cm]{arxiv-qr.svg}
+    \includesvg[height=3.5cm]{qr/srigl-arxiv-qr.svg}
   \end{array}
   \hfill
   \centering
@@ -89,7 +89,7 @@
   \RaggedRight
   CalgaryML Lab:
   \begin{array}{l}
-    \includesvg[height=3.5cm]{calgaryml-qr.svg}
+    \includesvg[height=3.5cm]{qr/calgaryml-qr.svg}
   \end{array}
 }
 % (can be left out to remove footer)
@@ -127,22 +127,22 @@
 
 % Colour logos
 \logoright{
-    \includegraphics[height=\logoheight]{iaifi-logo-black.pdf}
+    \includegraphics[height=\logoheight]{logos/iaifi-logo-black.pdf}
     \hspace{\logooffset}
-    \includegraphics[height=\logoheight]{Vector-Institute_Logo.png}
+    \includegraphics[height=\logoheight]{logos/Vector-Institute_Logo.png}
     \hspace{\logooffset}
-    \includesvg[height=\logoheight]{ucmllogo-text.svg}
+    \includesvg[height=\logoheight]{logos/ucmllogo-text.svg}
     \hspace{\logooffset}
-    \includesvg[height=\logoheight]{UC-horz-rgb.svg}
+    \includesvg[height=\logoheight]{logos/UC-horz-rgb.svg}
 }
 \logoleft{
-    \includesvg[height=\logoheight]{upper_bound-black.svg}
+    \includesvg[height=\logoheight]{logos/upper_bound-black.svg}
     \hspace{\logooffset}
-    \includesvg[height=\logoheight]{University_of_Guelph_logo.svg}
+    \includesvg[height=\logoheight]{logos/University_of_Guelph_logo.svg}
     \hspace{\logooffset}
-    \includesvg[height=\logoheight]{MIT_logo-colour.svg}
+    \includesvg[height=\logoheight]{logos/MIT_logo-colour.svg}
     \hspace{\logooffset}
-    \includesvg[height=\logoheight]{Google_2015_logo.svg}
+    \includesvg[height=\logoheight]{logos/Google_2015_logo.svg}
 }
 
 
@@ -181,7 +181,7 @@
     \end{enumerate}
 
     \begin{figure}
-        \includegraphics[width=.85\colwidth]{fig/constantfanin.pdf}
+        \includegraphics[width=.85\colwidth]{srigl_example_figs/constantfanin.pdf}
         \caption{Constant fan-in pruning v.s.\ unstructured pruning.}\label{fig:constfanin}
     \end{figure}
 
@@ -196,7 +196,7 @@
   \end{itemize}
 
 \begin{figure}
-    \includegraphics[width=.5\colwidth]{fig/Theory_1.pdf}
+    \includegraphics[width=.5\colwidth]{srigl_example_figs/Theory_1.pdf}
     % \includesvg[width=\colwidth]{fig/Theory_1.svg}
     \caption{Output-norm variance analysis.}\label{fig:theory}
 \end{figure}
@@ -248,13 +248,13 @@
 \begin{figure}
     \begin{minipage}{.49\colwidth}
         \centering
-        \includegraphics[width=0.49\colwidth]{fig/resnet50.pdf}
+        \includegraphics[width=0.49\colwidth]{srigl_example_figs/resnet50.pdf}
         \caption{ResNet-50/ImageNet}\label{fig:resnet50_acc_vs_sparsity}
     \end{minipage}
     \hfill
     \begin{minipage}{.49\colwidth}
         \centering
-        \includegraphics[width=0.49\colwidth]{fig/vit.pdf}
+        \includegraphics[width=0.49\colwidth]{srigl_example_figs/vit.pdf}
         \caption{\gls{vit}/ImageNet}\label{fig:vit}
     \end{minipage}
 \end{figure}
@@ -266,13 +266,13 @@
 \begin{figure}
     \begin{minipage}[t]{.49\colwidth}
         \centering
-        \includegraphics[width=\linewidth]{fig/acc-vs-flops.pdf}
+        \includegraphics[width=\linewidth]{srigl_example_figs/acc-vs-flops.pdf}
         \caption{\textbf{Training \gls{flops}} for \gls{srigl} on ResNet-50/ImageNet at a variety of sparsities compared with dense generalization. \gls{flops} are normalized by dense training \gls{flops}.}\label{fig:combined-flops}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{.49\colwidth}
         \centering
-        \includegraphics[width=\linewidth]{fig/CPU_benchmark.pdf}
+        \includegraphics[width=\linewidth]{srigl_example_figs/CPU_benchmark.pdf}
         \caption{\textbf{PyTorch timings.} Benchmarking a naive (non-optimized) PyTorch implementation of our condensed  representation on CPU.}\label{fig:CPUbenchm}
     \end{minipage}
 \end{figure}
@@ -292,18 +292,18 @@
 
 \begin{figure}
     \centering
-    \includegraphics[width=\colwidth]{fig/ablationvsnoablation_wide.pdf}
+    \includegraphics[width=\colwidth]{srigl_example_figs/ablationvsnoablation_wide.pdf}
      \caption{\textbf{Neuron ablation.} At sparsity levels over 90\%, \gls{rigl} learns to completely mask (ablate) a large number of neurons within each layer, effectively reducing layer width. Imposing a constant fan-in constraint requires all neurons to have the same number of (non-pruned) incoming weights and therefore inhibits ablation, which results in worse generalization performance than \gls{rigl}. Allowing \gls{srigl} to ablate neurons  restores \gls{rigl}-level performance.}\label{fig:ablationvsnoablation}
 \end{figure}
 
 \begin{figure}
     \begin{minipage}[t]{.48\colwidth}
-        \includegraphics[width=0.49\colwidth]{fig/imagenet_perc_active.pdf}
+        \includegraphics[width=0.49\colwidth]{srigl_example_figs/imagenet_perc_active.pdf}
         \caption{Neuron Ablation}\label{fig:imagenet_perc_active}
     \end{minipage}
     \hfill
     \begin{minipage}[t]{.48\colwidth}
-        \includegraphics[width=0.48\colwidth]{fig/vit_rigl_fan_in.pdf}
+        \includegraphics[width=0.48\colwidth]{srigl_example_figs/vit_rigl_fan_in.pdf}
         \caption{\textbf{Sparse Fan-In vs. \gls{vit} layer index at the end of training with \gls{rigl} at 90\% sparsity}. Only the first 10 layers are shown for clarity. We find that \gls{rigl} learns a sparse connectivity with large variance in fan-in between neurons within the same layer with some neurons receiving up to $\times 10$ the number of active connections than the mean for the same layer.}\label{fig:vit-rigl-fan-in}
     \end{minipage}
 \end{figure}
